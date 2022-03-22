@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>hello page</title>
+</head>
+<body>
+<h2>Data List</h2>
+<table>
+<tr>
+  <th>Data</th>
+</tr>
+<tr th:each= "dataList : ${list}">
+<td th:text="${dataList.instDate}"></td>
+<td th:text="${dataList.instUser}"></td>
+<td th:text="${dataList.updtDate}"></td>
+<td th:text="${dataList.updtUser}"></td>
+<!--/*<td th:text="${dataList.delFgl}"></td>*/-->
+<td th:text="${dataList.postNo}"></td>
+<td th:text="${dataList.postTitle}"></td>
+<td th:text="${dataList.postText}"></td>
+</tr>
+</table>
+</body>
+</html>
